@@ -3,4 +3,4 @@
 .env
 .test-env
 
-threads
+threads.env

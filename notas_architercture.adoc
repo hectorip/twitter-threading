@@ -1,0 +1,5 @@
+= Notas sobre diagrama de módulos
+
+- Módulo mailer -> Email clients como adapters
+
+Hola

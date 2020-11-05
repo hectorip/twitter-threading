@@ -1,0 +1,29 @@
+thread:
+  tweets:
+    - text: |
+        ¿Has escuchado cuánto se escandalizan los devs cuando otro dice que usó MD5? Aunque MD5 sigue sin ser "reversible" teóricamente, mi investigación sobre los Rainbow Tables y el mal uso de MD5 puede aclararte por qué es tan mala idea usarlo para guardar passwords.
+        👇
+    - text: |
+        La primera cosa que tiene de 'malo' MD5 (y también las familias SHA-1, SHA-2 y SHA-3) es que están pensados para ser rápidos. Una computadora con un buen GPU puede hacer miles de millones de hashes por segundo.
+    - text: |
+        Si alguien tiene un hash, que sabe que pertenece a una cadena de texto corta (como un password), tiene múltiples formas de atacarlo de maneras más efectivas que la fuerza bruta, aunque incluso la fuerza bruta puede ser efectiva.
+    - text: |
+        Aquí es donde entran las "Tablas arcoíris" (léase con acento español). Las Rainbow Tables fueron definidas en este paper: https://lasec.epfl.ch/pub/lasec/doc/Oech03.pdf, y se pensaron como una forma de ayudar a romper secretos criptográficos. ¿Por qué se necesitan?
+    - text: |
+        La forma ideal de romper un hash sería aprovechando una de sus propiedades: siempre devuelven el mismo hash para cierto texto plano. Así, teóricamente se podría crear un índice con todos los hashes posibles y un texto que sea una preimagen de este hash.
+    - text: |
+        Algo imposible prácticamente: teniendo 2^128 entradas y suponiendo que cada entrada ocupe 32 bytes, tendríamos 9007199254740992 YottaBytes, la unidad de almacenamiento más grande con nombre: https://simple.wikipedia.org/wiki/Yottabyte
+    - text: |
+        Pero para romper ciertos sistemas, no necesitamos todos lo hashes posibles, sino todos los hashes de los valores posibles únicamente. Es decir, en el caso de guardado de contraseñas se reduce drásticamente el espacio de valores que se tienen que guardar.
+    - text: |
+        Aún así, en algunos casos es imposible guardar el espacio completo, sobre todo si un sistema permite un espacio de carácteres amplio o llaves grandes. Aquí es donde entraron las Rainbow Tables, como una manera de hacer un intercambio entre memoria y procesamiento.
+    - text: |
+        Los Rainbow Tables son una manera de guardar sólamente algunos valores como marcadores de la posibilidad de que un texto plano esté en cierta cadena precalculada de valores, usando una función de reducción.
+    - text: |
+        Actualmente las RT han caído un poco en desuso debido a dos razones principales: 1) La capacidad de almacenamiento y cómputo han aumentado muchísimo y 2) Son fáciles de evitar con un buen sistema de almacenamiento de passwords.
+    - text: |
+        Las RT's son completamente evitables con passwords salados o claves saladas. Esto significa añadir un valor aleatorio (sal o salt) al valor original antes de hashearlo, haciendo el espacio de valores planos casi infinito e impráctico de atacar con tablas precalculadas.
+    - text: |
+        En la actualidad, debido al poder de cómputo y almacenamiento existente, se requiere que siempre, siempre se "salen" los passwords, porque el no hacerlo es lo que llevo a MD5 y los otros algoritmos de hash a ser tan vulnerables para guardar passwords.
+    - text: |
+        Esto es tan necesario que hay algoritmos que salan los passwords siempre y que además intencionalmente son "lentos" para evitar que se prueben muchos textos planos en poco tiempo. Algunos ejemplos: bcrypt, pbkdf2, scrypt y ARGON2, de los que platicaremos después.

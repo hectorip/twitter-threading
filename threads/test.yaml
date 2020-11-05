@@ -1,0 +1,4 @@
+thread:
+  tweets:
+    - text: |
+        Uso específico de colisiones de MD5: https://www.win.tue.nl/hashclash/EC07v2.0.pdf

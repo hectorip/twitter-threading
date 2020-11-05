@@ -1,0 +1,48 @@
+thread:
+  tweets:
+    - text: |
+        Hace varios semanas vi un reto sobre romper un hash de MD5 que porque otra persona había dicho que MD5 en estos tiempos es completamente reversible. Eso me hizo cuestionarme mi propio conocimiento sobre MD5 así que investigué y aquí lo que aprendí:
+
+        🧵🧵🧵
+      # media:
+      #   - hermes.jpg
+      #   - sunset.jpg
+    - text: |
+        Primero tenemos que entender lo que hace a una función hash segura para usarse criptográficamente.
+        1) El hash tiene que ser completamente impredecible a partir de su entrada.
+
+        MD5(hola) = 4d186321c1a7f0f354b297e8914ab240
+        MD5(holaa) = 8b334cc5ca63a2511b3f1bc3a9a56f98
+    - text: |
+        2) Resistente a colisiones.
+
+        Debe ser prácticamente imposible encontrar dos o más valores que den el mismo hash. Debido a la naturaleza del problema, lo mayor seguridad que un algoritmo puede ofrecer en este aspecto es 2^n/2 operaciones, siendo n el tamaño en bits del hash.
+    - text: |
+       Una nota sobre las colisiones: siempre existen ya que el espacio de textos planos es infinito en teoría, mientras que el espacio de hashes tiene un límite de 2^n elementos.
+    - text: |
+        3) La función deber ser resistente a las preimágenes.
+
+        Debe ser prácticamente imposible encontrar un texto plano que cumpla con un hash dado. En el lenguaje de la criptografía esto se llama una 'preimagen'. La cantidad de operaciones aceptada es 2^n.
+    - text: |
+        MD5 fue publicado en 1992 (https://www.ietf.org/rfc/rfc1321.txt) por Ron Rivest del MIT, como sucesor del Message Digest 4.
+    - text: |
+        MD5 procesa bloques de 512 bits, para actualizar un estado interno de 128 bits y está basado en la estructura de Merkle-Damgård para funciones hash: se aplica una misma 'función de compresión' al conjunto de bloques del mensaje original.
+    - text: |
+        La estructura de Merkle-Damgård es una forma de transformar una función que toma bloques de tamaño fijo en un función hash, que puede aceptar entradas de tamaño arbitrario y garantiza que si la función de compresión cumple con 1) y 2), la función hash igual.
+    - text: |
+        Ahora sí, ¿por qué está roto MD5?  Desde 1996 se conocen formas de crear colisiones de su función de compresión. En 2005 Wang y Yu publicaron una forma de generar colisiones de la función completo: http://merlot.usc.edu/csac-f06/papers/Wang05a.pdf
+    - text: |
+        Actualmente se pueden crear colisiones de MD5 en segundos, y hay muchos ejemplos de construcción de colisiones con fines específicos, por ejemplo: https://www.win.tue.nl/hashclash/EC07v2.0.pdf
+    - text: |
+        Además, se han descubierto formas de atacarla para reducir su resistencia a preimágenes (encontrar un valor que cumpla con un hash dado), por ejemplo, para intentar romper un password.
+    - text: |
+        Este paper: https://iacr.org/archive/eurocrypt2009/54790136/54790136.pdf, muestra una forma de encontrar una preimagen en "sólo" 2^123.4 operaciones. Este sigue siento una ataque teórico, no es factible llevarlo a la práctica. ¿Por qué?
+    - text: |
+        Ejemplo: Mi computadora que puede hacer cerca de 500 millones de MD5 por segundo (2^28.9 operaciones), tardaría 2^(123.4 - 28.9) = 2^94.5 segundos.
+
+        888235206982276.5 Millones de años en promedio en encontrar una preimagen.
+    - text: |
+        MD5 no está taaaan roto como parece o por lo menos eso dice la teoría. Es inusable como firma digital o verificador criptográfico (por lo de las colisiones), pero no es fácil encontrar una preimagen de un hash cualquiera.
+    - text: |
+        ¿Entonces, cómo encuentran algunos servicios un password de manera tan sencilla? Eso es tema de otra discusión: el mal uso que se le ha dado y los Rainbow Tables.
+
