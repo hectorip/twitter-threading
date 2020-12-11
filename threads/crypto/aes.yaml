@@ -1,6 +1,26 @@
 thread:
     tweets:
       - text: |
-          ¿Qué tanto sabes de los cifrados de bloque? Lo cifrados más fuertes y más confiables de la actualidad son de este tipo. En este hilito voy a contar acerca de AES.
-          ⬇⬇⬇
+          ¿Qué tanto sabes de los cifrados de bloque? Lo cifrados más fuertes y más confiables de la actualidad son de este tipo. En este hilito voy a contar acerca de AES y otros cifrados de bloque.
+
+          🕳🐇🐇🐇⬇
       - text: |
+          Empecemos por uno de los más conocidos y viejitos: DES. El Data Encryption Standard usa una llave de 56 bits y tiene un bloque de 64 bits. Estos valores tan pequeños lo han hecho inusable para protegerse contra la velocidad de las computadoras actuales.
+      - text: |
+          Su sucesor, el 3-DES o Triple DES usa 3 llaves de 56 bits y tres cifrados DES para dar una seguridad de 112 bits, pero sigue teniendo un bloque de 64 bits, por lo que no es recomendado usarlo en nuevos sistemas.
+      - text: |
+          El cifrado de bloque más usado mundialmente es el AES: Advanced Encryption Standard. Este es un algoritmo que fue escogido tras un concurso organizado por la National Institute of Standards and Technology de Estados Unidos.
+      - text: |
+          El AES es un subconjunto de cifrados de la familia del algoritmo original llamado Rijndael creado por dos criptanalistas Belgas. Paper: https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf
+      - text: |
+          AES procesa bloques de 128 bits, usando llaves de 128, 196, o 256 bits, cada una dando más seguridad que la anterior. Debido a su tamaño de bloque, no es susceptible a ataques de "Codebook", lo que significa calcular todos los bloques posibles.
+      - text: |
+          AES ganó la competición a otros 14 finalistas del concurso y según los creadores de otro finalista (Twofish), Rijndael está casi muerto desde que nació, porque se han logrado ataques teóricos que rompen el cifrado completo con condiciones específicas.
+      - text: |
+          Debido a su adopción AES está implementado como instrucción en la mayoría de los procesadores, ya que además está pensado para ser extremadamente rápido. Las plataformas de nube actuales usan AES256 o AES128 en su cifrado en reposo.
+      - text: |
+          Otros cifrados de bloque a tener en cuenta son los otros finalistas del concurso de la NIST, como por ejemplo Twofish y Serpent, cada uno con características diferentes: más robustos pero más lentos.
+      - text: |
+          Nos faltó hablar de una cosa: ¿Cómo se usa un cifrado de bloque para transformar un texto de tamaño arbitrario? Se utilizan dos técnicas juntas: el relleno (padding) y los modos de operación, que significa "encadenar" la serie de bloques. De esos hablaremos después.
+      - text: |
+          Extra: Rijndael se pronuncia como `rain-dull` en inglés. 👋👋👋
