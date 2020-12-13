@@ -1,0 +1,22 @@
+thread:
+    tweets:
+      - text: |
+          La última parte que quería contar acerca de los cifrados de bloque son los modos de operación. ¿Cómo es que un cifrado de bloque puede trabajar sobre textos de tamaño arbitrario? En este hilo cuento parte de lo que he aprendido.
+
+          🕳🐇👇
+      - text: |
+          Lo primero que tienes que recordad es que un cifrado bloque trabaja sobre bloques de tamaño fijo, es decir, toma texto plano de tamaños como 64, 128 o 256 bits, y los transforma en un permutación pseudo-aleatoria de bits (no se entiende nada después del cifrado).
+      - text: |
+          Para poder cifrar textos de cualquier tamaño, se tienen que usar diferentes técnicas para poder usar el cifrado de bloque. Primero, ¿Qué pasa si tenemos un mensaje más pequeño que el bloque? Se usa el relleno (padding): se agrega al mensaje los bytes que se necesiten.
+      - text: |
+          El padding funciona así: se agrega un byte '01' si falta un byte, dos 02 si faltan dos y así hasta 255 bytes, es decir, si faltaran 255 bytes se agrega 255 veces ff. De esta manera se puede reconocer el padding después del descifrado y removerlo.
+      - text: |
+          Ya que entendemos cómo se puede cifrar un texto más corto, veamos cómo se hace con un texto más largo que el bloque. La forma más sencilla es el "Electronic Codebook" o ECB. En esta operación, se corta el mensaje en bloques del tamaño aceptado por el algoritmo.
+      - text: |
+          Si un bloque no tiene el tamaño suficiente, se usa padding. Después, cada bloque se cifra independientemente. El modo de operación ECB no es recomendado para aplicaciones en las que el texto se pueda repetir, ya que es fácil detectar bloques iguales.
+      - text: |
+          Según criptanalistas serios, nunca deberías usar el modo ECB, ya que revela demasiada información. Aquí hay un ejemplo de una imagen cifrada con el AES128 en modo ECB, creada por @FiloSottile (https://blog.filippo.io/the-ecb-penguin/).
+        media:
+          - Tux-ECB.png
+      - text: |
+          Hablaremos de otros dos modos de operación más efectivos en los siguientes días. Si quieres aprender más de criptografía aplicada, te invito al live (o la repetición) en la que hablaré acerca de algoritmos de hashing: https://youtu.be/Tij0Qcurbt4 ✌✌✌
