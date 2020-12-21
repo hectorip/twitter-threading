@@ -1,0 +1,19 @@
+thread:
+    tweets:
+      - text: |
+          Esta semana vi una plática que se llama "Software is Details", dada por @KevlinHenney en GOTO 2020. El resumen: los ingenieros de software no debemos confiarnos con decir que algo es "sólo un detalle", ya que nos puede salir caro. Esto es un Rabbit Hole.
+
+          🕳🐇👇
+        media:
+          - media/sid2.png
+      - text: |
+          1. El software está hecho a partir de significado. Es decir, los que lo creamos intentamos entender al máximo grado posible los casos de uso y para qué estamos creando el software y esa es la base de la construcción de todos los programas.
+      - text: |
+          Basado en lo anterior, no tiene sentido decir que algo es "sólo un detalle semántico", porque Semántica == Significado y al ignorar estos detalles ponemos en peligro el entendimiento del problema. Tenemos que ser lo más precisos posibles y nos podemos valer de las abstracciones para esto.
+      - text: |
+          2. Las abstracciones, entendidas como representaciones de las entidades y procesos del mundo real representadas en el software deben ayudarnos a ser muy precisos en nuestra comunicación y registro de ideas.
+      - text: |
+          3. Debemos tener cuidado de que nuestras abstracciones no nos hagan olvidar "detalles", debemos intentar mantener las dos vistas (la general y la detallada) todo el tiempo posible. Es por eso que los arquitectos de software NO deben estar separados del código.
+        media:
+          - media/sid3.png
+      - text: |
