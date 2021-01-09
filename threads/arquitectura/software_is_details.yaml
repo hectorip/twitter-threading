@@ -9,7 +9,7 @@ thread:
       - text: |
           1. El software está hecho a partir de significado. Es decir, los que lo creamos intentamos entender al máximo grado posible los casos de uso y para qué estamos creando el software y esa es la base de la construcción de todos los programas.
       - text: |
-          Basado en lo anterior, no tiene sentido decir que algo es "sólo un detalle semántico", porque Semántica == Significado y al ignorar estos detalles ponemos en peligro el entendimiento del problema. Tenemos que ser lo más precisos posibles y nos podemos valer de las abstracciones para esto.
+          Basado en lo anterior, no tiene sentido decir que algo es "sólo un detalle semántico", porque Semántica == Significado y al ignorar estos detalles ponemos en peligro el entendimiento del problema. Tenemos que ser lo más precisos posibles cuando hablamos de algo.
       - text: |
           2. Las abstracciones, entendidas como representaciones de las entidades y procesos del mundo real representadas en el software deben ayudarnos a ser muy precisos en nuestra comunicación y registro de ideas.
       - text: |
@@ -17,3 +17,32 @@ thread:
         media:
           - media/sid3.png
       - text: |
+          La plática pone como ejemplo los mapas: el sentido de circulación de las calles parece un "detalle" que aparece hasta que haces mucho zoom sobre un mapa. Sin embargo, cambiar el sentido de circulación de las calles en una ciudad sería algo MUY costoso.
+      - text: |
+          4. La arquitectura de software según @Grady_Booch es las decisiones que tomamos que después van a costar cambiar. Hay "detalles" que son muy costosos de cambiar, como el modelo de ejecución de un programa, cosas que un arquitecto no debería pasar por alto.
+      - text: |
+          5. "No es acerca de las cajas, sino de las flechas". Esta frase se refiere a los diagramas que representan la arquitectura de un sistema. Puede que haya algo muy pequeño (la caja) de lo que muchas cosas dependan (las flechas).
+      - text: |
+          Detectar, proteger y diseñar correctamente estas partes del sistema que parecen pequeñas pero son fundamentales es una parte esencial del desarrollo de software. Además, mientas menos dependencias entre módulos haya, mejor.
+        media:
+          - media/sid4.png
+      - text: |
+          6. Programar es diseñar. Siempre que programamos estamos definiendo cómo está compuesto algo y debemos estar atentos a las necesidades y limitantes del problema.
+      - text: |
+          7. Las suposiciones siempre existen, pero debemos conocerlas y ser explícito respecto a cuáles son y dónde están. Si no, se pueden convertir en un lego en el piso en la oscuridad: te dolerá cuando te encuentres con ellas.
+        media:
+          - media/sid5.png
+      - text: |
+          8. Detectar errores temprano es importante: hazlo mediante testing y verificación de configuración. Los errores catastróficos pueden ser casi eliminados por estos dos factores. La configuración es tan importante como el código.
+      - text: |
+          9. Un sólo tornillo parece no ser importante, hasta que te falta. En ese caso, el tornillo puede representar el valor entero de lo que estés construyendo.
+      - text: |
+          El más valioso para mi: 10. La arquitectura es un hipótesis que tiene que ser probada o refutada mediante la implementación y métricas. Tu arquitectura no está terminada hasta que no aprendes los detalles de la operación.
+        media:
+          - media/sid6.png
+      - text: |
+          La plática tiene algunos tintes cómicos haciendo escarnio de algunos eufemismos que usaron empresas importantes para describir sus errores catastróficos en el software como llamar "anomalía" al choque de una nave espacial.
+        media:
+          - media/sid2.gif
+      - text: |
+          Si quieres aprender más del tema, no te pierdas la charla aquí: https://youtu.be/kX0prJklhUE
