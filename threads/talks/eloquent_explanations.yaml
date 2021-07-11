@@ -1,23 +1,24 @@
 thread:
     tweets:
       - text: |
-          Hace tiempo terminé "La vida secreta de la mente" de Mariano Sigman, un libro sobre la mente y los secretos del inconsciente. En este hilo les quiero contar sobre lo que aprendí
-
+          La semana pasada, investigando sobre @russolsen vi la charla "Eloquent Explanations". En ella se proponen 5 puntos para darnos a entender cuando compartimos conocimiento con nuestro equipo u otras personas. Aquí te resumo lo que aprendí.
           🕳🐇
         media:
-          - moonwalking.jpg
+          - russ1.png
       - text: |
-          1. La memoria nos hace quienes somos. No podríamos tener personalidad o "ser yo" si no mantuviéramos en nuestro cerebro las experiencias y rasgos que nos identifican. La memoria es el componente central de la identidad.
+          La motivación: lo que nos limita para construir software es conocimiento. Conocimiento sobre el dominio, el negocio o el sistema. Es por eso que compartirlo es una muy buena forma de ayudar al equipo a avanzar. La principal forma de compartirlo es con explicaciones.
       - text: |
-          2. La mejor forma de retener una memoria es entenderla. Los expertos en diferentes áreas ven el mundo diferente: un gran maestro de ajedrez no ve piezas individuales sino patrones, así es más fácil para él retenerlo.
+          Ahora veamos cómo podemos explicarnos mejor. Punto 1: debemos tener un plan o una estructura para compartir el conocimiento, lo primero es no aventar tus pensamientos sin estructura. Russ propone algunas estructuras, como "Zomm In", "Zoom Out" y "simple to complex".
       - text: |
-          3. "Mientras más experiencias tengamos en la vida, el tiempo parecerá irse más lento". Esta es una de las perlas más valiosas del libro. ¿Te has preguntado por qué parece que se te fue un día como agua? Porque no hiciste nada memorable.
+          Zoom In -> Empieza en el contexto más amplio y termina en los detalles. Por ejemplo: Queremos vender zapatos -> Por eso estamos construyendo un eCommerce -> Por eso necesitamos este botón de "Pagar". Zoom Out -> lo mismo, pero en sentido contrario.
       - text: |
-          Las memorias sirven como marcadores temporales. Mientras más cosas que sean memorables o mientras más experiencias metas en tu vida, más lento percibirás el tiempo. "La monotonía colapsa el tiempo; la novedad lo expande".
+          "De los simple a lo complejo" -> 
       - text: |
-          Sócrates decía que la vida que no se examina no vale la pena ser vivida. ¿Qué pasa con la vida que ni siquiera logramos recordar? Esto no es cuestión de tener una memoria inhabilitada, sino de buscar cosas que valga la pena hacer y recordar.
+          "Nadie en esta sala nació con ese conocimiento codificado en su ADN"
       - text: |
-          4. El mundo antiguo daba más importancia a la memoria porque no tenían las herramientas que tenemos hoy y que hacen que la hayamos relegado a un lugar remoto. No es malo aprovechar las herramientas de hoy, pero podemos aprovechar las técnicas que usaban antes.
+          La terminología es un obstáculo para los que están empezando.
+      - text: |
+          
       - text: |
           5. Si quieres recordar algo, tienes que pensar en ello, repetirlo, hacerlo visualmente memorable. Nuestro cerebro está hecho para recordar cosas visuales. Mientras más vívido imagines algo, más fácil será de recordar. La ATENCIÓN es un pre-requisito para recordar.
       - text: |
