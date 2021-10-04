@@ -1,0 +1,13 @@
+thread:
+    tweets:
+      - text: |
+          Otra muy buena plática de @russolsen es "Functional Programming in 40 minutes". En ella te explica de manera sencilla qué es la programación funcional y cómo puedes empezar con ella. En este hilo te comparto algunas de las ideas principales.
+          🕳🐇
+        media:
+          - media/fp40_1.png
+      - text: |
+          Muchas personas cuando hablan de programación funcional (FP), dicen que lo primero que tienes que hacer es "olvidarte de todo lo que sabes de programación". Russ está en contra de eso porque cuando aprendemos una nueva forma de pensar es como cuando refactorizamos.
+      - text: |
+          Cuando refactorizamos algo no empezamos todo desde cero, sino que usamos las piezas que funcionan bien o tienen sentido en el nuevo contexto. Lo mismo pasa con la programación funcional: no necsitas tirar a la basura todo lo que sabes, sino "refactorizar" lo que sabes.
+      - text:
+          ¿Qué cosas cambian, entonces? 
