@@ -1,0 +1,28 @@
+thread:
+    tweets:
+      - text: |
+            El gran Joe Armstrong (@joearmstrong) dio una charla increíble en el Strange Loop de 2014 hablando sobre el estado del desarrollo de software en ese entonces y parece que no ha mejorado en nada, de hecho ha empeorado. Aquí resaltamos algunos de sus
+        media:
+          - media/themess_0.png
+      - text: |
+          El stack tecnológico (esas herramientas con las que trabajas) no es el diferenciador importante, pero la tecnología que escojas te puede ayudar a avanzar más rápido en tu camino, si identificas los patrones que te llevan hacia adelante.
+      - text: |
+          Una forma útil de pensar es el "growth mindset", no somos seres fijos que nos quedamos como nacimos. Para empezar con esta forma de pensar puedes agregar "aún" al final de los pensamientos que expresan limitaciones: "No puedo leer en inglés, AÚN".
+      - text: |
+          La manera en que te comunicas y sobre todo en la que das feedback es de superlativa importancia. La forma en que haces sentir a las personas con tus palabras tiene un impacto directo en tu equipo y en tu relación con ellas. No podrás ser lider si no dominas esto.
+      - text: |
+          Pensar más en el producto. Puedes utilizar el framework STR: Scope - Time - Resources. Este framework considera el alcance, el tiempo límite y los recursos para lograrlo. Hay que cuidar que el alcance no crezca inadvertidamente ("scope creep").
+        media:
+          - media/xnt_scope_creep.png
+      - text: |
+          Mide todo lo que haces: desde las métricas que le interesan al negocio (que son las más importantes) hasta las cosas que te interesan a ti como desarrollador. Integra herramientas que te ayuden a encontrar esas métricas y a entregarlas a los que les interesen.
+      - text: |
+          Ten cuidado con tus vicios: todos los tenemos pero los vicios o hábitos diría yo, define en gran medida tus resultados. Ten cuidado con lo que metes a tu mente tanto como lo tienes con lo que metes a tu cuerpo.
+      - text: |
+          Con lo que yo me quedo: "Romper prod[uction] es mejor a no tener nada que romper" -> Lanza tu producto/proyecto/software/negocio yaaaa. Esto tien que ver con el modelo de pensamiento de escoger cosas en las que el valor de perder sea menor que el valor de no jugar.
+      - text: |
+          Libro recomendado: "Fooled by Randomness" de Nassim Nicholas Taleb, que te ayuda a ser consciente sobre las cosas que muchas veces le atribuimos a una causa que parece con intención, pero en realidad es la aleatoriedad actuando.
+      - text: |
+          Lección final: para progresar en la vida necesitas recursos (normalmente dinero), suerte (oportunidades, acceso a las personas adecuadas, etc.) y esfuerzo. El único de los tres que está en tu control es el esfuerzo, es esencial para progresar.
+      - text: |
+          Frase que me gustó: "El hecho de que este mensaje le llegue a 80 personas es más valioso que mi miserable existencia" 🤣🤣🤣. Puedes ver la plática aquí: https://youtu.be/DGh0avweHlE, gracias @xnt por darte el tiempo de compartir todo esto.
