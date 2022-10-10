@@ -1,9 +1,7 @@
 thread:
   tweets:
     - text: |
-        Hace varios semanas vi un reto sobre romper un hash de MD5 que porque otra persona había dicho que MD5 en estos tiempos es completamente reversible. Eso me hizo cuestionarme mi propio conocimiento sobre MD5 así que investigué y aquí lo que aprendí:
-
-        🧵🧵🧵
+        Muchos creen que MD5 en estos tiempos es completamente reversible. Eso me hace cuestionarme mi propio conocimiento sobre MD5 así que investigué y aquí lo que aprendí:
       # media:
       #   - hermes.jpg
       #   - sunset.jpg
@@ -42,7 +40,7 @@ thread:
 
         888235206982276.5 Millones de años en promedio en encontrar una preimagen.
     - text: |
-        MD5 no está taaaan roto como parece o por lo menos eso dice la teoría. Es inusable como firma digital o verificador criptográfico (por lo de las colisiones), pero no es fácil encontrar una preimagen de un hash cualquiera.
+        MD5 no está taaaan roto como parece o por lo menos eso dice la teoría. Es inusable como firma digital o verificador criptográfico (por lo de las colisiones), pero no es fácil encontrar una preimagen (encontrar un valor que genere un hash dado) de un hash cualquiera.
     - text: |
         ¿Entonces, cómo encuentran algunos servicios un password de manera tan sencilla? Eso es tema de otra discusión: el mal uso que se le ha dado y los Rainbow Tables.
 

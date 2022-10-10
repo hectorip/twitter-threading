@@ -1,0 +1,18 @@
+thread:
+    tweets:
+      - text: |
+          Ha llegado el momento de platicar un poco más sobre lo que trabajo (a parte de quejarme de los klinkoders). ¿Necesitas un poco de ayuda con tu salud mental? ¿Has tenido problemas de depresión, ansiedad o estrés? La principal app en la que trabajo te puede ayudar:
+      - text: |
+          La app se llama Mindsurf, y la hemos estado desarrollando desde hace como 6 años (ha pasado por muchas etapas y transformaciones). Junto con un equipo de psicólogos, investigadores y copywriters hemos desarrollado un montón de contenido que te puede ayudar.
+        media:
+          - media/ms/ms1.png
+      - text: |
+          La vedad es el proyecto que más me ha llenado en la vida, primero por la misión, que es ayudar al mayor número de personas posible a mejorar su salud mental, y segundo, por la dificultad técnica de sus entrañas.
+      - text: |
+          Otra cosa que me encanta es el equipo con el que he trabajado que actualmente está en su mejor versión, con personas con las que siempre es un placer trabajar: @Grecia_rey, @dianevoith, @alecodesdancer, @ninofnj, @huacamx, @HECT0R_NINO y más que no están aquí.
+      - text: |
+          Apreciaría mucho que la usaran y cualquier feedback que me puedan dar es bienvenido y recompensado. Pueden descargarla de las tiendas oficiales. iOS: https://apple.co/3Teaxa2 Android: https://bit.ly/3CNpbPY
+      - text: |
+          Finalmente, si alguien quiere colaborar con nosotros, tiene ideas o críticas, es más que bienvenid@. P.D. Hoy es el día de la salud mental y estamos regalando suscripciones por un año a todos los que se registren hoy.
+        media:
+          - media/ms/ms2.jpg
