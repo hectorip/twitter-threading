@@ -10,7 +10,6 @@ thread:
         - hermes.jpg
         - sunset.jpg
     - text: |
-        @svpino Your twitter-threading script can now supprt multiple images in a tweet. Can I create a PR for this?
-    - text: 
+         Your twitter-threading script can now supprt multiple images in a tweet. Can I create a PR for this?
+    - text:
         And this is the final tweet that include another attached tweet.
-      attachment: https://twitter.com/svpino/status/1302107301424369664?s=20

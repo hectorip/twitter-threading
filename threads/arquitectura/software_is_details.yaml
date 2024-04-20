@@ -1,9 +1,11 @@
 thread:
     tweets:
       - text: |
-          Esta semana vi una plática que se llama "Software is Details", dada por @KevlinHenney en GOTO 2020. El resumen: los ingenieros de software no debemos confiarnos con decir que algo es "sólo un detalle", ya que nos puede salir caro. Esto es un Rabbit Hole.
+          La plática que se llama "Software is Details", dada por @KevlinHenney en GOTO 202, es una joya.
+          El resumen: los ingenieros de software no debemos decir que algo es "sólo un detalle de implementación",
+          ya que nos puede salir caro. Esto es un Rabbit Hole (hilo).
 
-          🕳🐇👇
+          🕳🐇
         media:
           - media/sid2.png
       - text: |
@@ -43,6 +45,6 @@ thread:
       - text: |
           La plática tiene algunos tintes cómicos haciendo escarnio de algunos eufemismos que usaron empresas importantes para describir sus errores catastróficos en el software como llamar "anomalía" al choque de una nave espacial.
         media:
-          - media/sid2.gif
+          - media/sid2.png
       - text: |
           Si quieres aprender más del tema, no te pierdas la charla aquí: https://youtu.be/kX0prJklhUE

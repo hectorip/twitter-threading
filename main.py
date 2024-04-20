@@ -1,4 +1,3 @@
-from argparse import ArgumentError
 import os
 import re
 import tweepy
@@ -17,12 +16,23 @@ API_KEY = os.environ["API_KEY"]
 API_KEY_SECRET = os.environ["API_KEY_SECRET"]
 ACCESS_TOKEN = os.environ["ACCESS_TOKEN"]
 ACCESS_TOKEN_SECRET = os.environ["ACCESS_TOKEN_SECRET"]
+BEARER_TOKEN = os.environ["BEARER_TOKEN"]
 
 
-def authenticate():
+def authenticate_v1():
     auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
     return tweepy.API(auth, wait_on_rate_limit=True)
+
+
+def authenticate():
+    client = tweepy.Client(
+        consumer_key=API_KEY,
+        consumer_secret=API_KEY_SECRET,
+        access_token=ACCESS_TOKEN,
+        access_token_secret=ACCESS_TOKEN_SECRET,
+    )
+    return client
 
 
 def load(filename):
@@ -31,33 +41,38 @@ def load(filename):
 
     return thread["thread"]
 
+
 def upload_media(api, filename):
     res = api.media_upload(filename)
     return res.media_id
 
-def post(api, thread):
+
+def post(api, api_v1, thread):
     status = None
     for tweet in thread["tweets"]:
+        print(f"Posting tweet that starts with {tweet['text'][:10]}...")
+        if status:
+            print(status.data)
         args = {
-            "status": tweet["text"],
-            "in_reply_to_status_id": (status.id if status else None),
+            "text": tweet["text"],
+            "in_reply_to_tweet_id": (status.data.get("id") if status else None),
         }
-
+        print(args)
         if "attachment" in tweet:
-            status = api.update_status(**args, attachment_url=tweet["attachment"])
+            status = api.create_tweet(**args, attachment_url=tweet["attachment"])
         elif "media" in tweet:
             media_ids = []
             if type(tweet["media"]) is list:
                 for filename in tweet["media"]:
-                    media_ids.append(upload_media(api, filename))
+                    media_ids.append(upload_media(api_v1, filename))
             else:
-                media_ids.append(upload_media(api, tweet["media"]))
-            status = api.update_status(**args, media_ids=media_ids)
+                media_ids.append(upload_media(api_v1, tweet["media"]))
+            status = api.create_tweet(**args, media_ids=media_ids)
         else:
-            status = api.update_status(**args)
+            status = api.create_tweet(**args)
 
 
-def schedule(api, thread, when):
+def schedule(api, api_v1, thread, when):
     when = datetime.datetime.strptime(when, "%Y-%m-%d %H:%M")
     delta = (when - datetime.datetime.now()).total_seconds()
 
@@ -65,7 +80,9 @@ def schedule(api, thread, when):
         raise Exception("The value of the when argument is in the past")
 
     schedule = sched.scheduler(time.time, time.sleep)
-    schedule.enter(delta, 60, post, kwargs={"api": api, "thread": thread})
+    schedule.enter(
+        delta, 60, post, kwargs={"api": api, "api_v1": api_v1, "thread": thread}
+    )
     schedule.run()
 
 
@@ -84,11 +101,15 @@ if __name__ == "__main__":
     parser.add_argument(
         "--when",
         type=when_format,
-        required=True,
+        required=False,
         help="The date and time when the thread will be posted",
     )
     args = parser.parse_args()
 
     api = authenticate()
+    api_v1 = authenticate_v1()
     thread = load(args.thread)
+
+    if not args.when:
+        post(api, api_v1, thread)
     schedule(api, thread, args.when)
