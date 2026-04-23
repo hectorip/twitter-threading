@@ -71,7 +71,6 @@ def post(api, api_v1, thread):
         else:
             status = api.create_tweet(**args)
 
-
 def schedule(api, api_v1, thread, when):
     when = datetime.datetime.strptime(when, "%Y-%m-%d %H:%M")
     delta = (when - datetime.datetime.now()).total_seconds()
